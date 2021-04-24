@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartQuiz\ques2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        hr {
+            background-color: white;
+            width: 85%;
+        }
+
+        a {
+            color: white;
+            margin-right: 5px;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        #head1 {
+            text-align: center;
+            padding-top: 80px;
+            color: white;
+        }
+
+        #div11 {
+            position: relative;
+            width: 80%;
+            border: 2px solid white;
+            border-radius: 10px;
+            margin-top: -100px;
+            background-color: white;
+        }
+
+        #div12 {
+            position: relative;
+            width: 90%;
+            background-color: rgb(206, 145, 145);
+            margin-top: 90px;
+            margin-bottom: 20px;
+            padding: 50px;
+            text-align: justify;
+        }
+
+        .style1 {
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        #btn1 {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #chat {
+            height: 135px;
+            width: 75%;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            padding: 25px;
+        }
+
+        h4 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="1.jpg" alt="Logo" style="width:60px;">
+        </a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Mental illness
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Anxiety</a>
+                        <a class="dropdown-item" href="#">Depression</a>
+                        <a class="dropdown-item" href="#">Eating disorder</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Self Assessment
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Quiz1</a>
+                        <a class="dropdown-item" href="startquiz.html">Anxiety Quiz</a>
+                        <a class="dropdown-item" href="#">Quiz2</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <div class="container-fluid"
+        style="background-image: linear-gradient(to bottom right,dodgerblue, blue);height: 400px;width: 100%;">
+        <h1 class="display-3" id="head1">Anxiety Quiz</h1>
+    </div>
+
+    <div class="container" id="div11">
+        <div class="mx-auto rounded" id="div12">
+            <h4>Feeling hot or getting overheated</h4>
+            <form style="font-size:105%">
+                <div class="style1">
+                    <input type="checkbox" class="checks2" value="Not at all" id="q2"
+                        onclick="window.location.href='ques3.html';getValue2();return false">
+                    <label for="q2">Not at all</label>
+                </div>
+                <br>
+                <div class="style1">
+                    <input type="checkbox" class="checks2" value="Sometimes" id="q2"
+                        onclick="window.location.href='ques3.html';getValue2();return false">
+                    <label for="q2">Sometimes</label>
+                </div>
+                <br>
+                <div class="style1">
+                    <input type="checkbox" class="checks2" value="Most of the time" id="q2"
+                        onclick="window.location.href='ques3.html';getValue2();return false">
+                    <label for="q2">Most of the time</label>
+                </div>
+                <br>
+                <div class="style1">
+                    <input type="checkbox" class="checks2" value="All the time" id="q2"
+                        onclick="window.location.href='ques3.html';getValue2();return false">
+                    <label for="q2">All the time</label>
+                </div>
+                <br>
+            </form>
+            <div style="text-align: center;">
+                <a href="ques1.html">
+                    <button type="button" class="btn btn-dark ">Back</button>
+                </a>
+                <a href="ques3.html">
+                    <button type="button" class="btn btn-dark ">Next</button>
+                </a>
+                <p style="text-align: center;margin-top: 25px;">2/10</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="margin-top: 100px;">
+
+    </div>
+    <div class="container-fluid" style="background-color: rgb(32, 32, 32);color: white;">
+        <div class="row">
+            <div class="col-sm-3 offset-1" style="margin-top: 30px;">
+                <h3>Recent posts</h3>
+                <p><a href="#">Recent posts on survey</a></p>
+                <p><a href="#">Summer and winter campign</a></p>
+                <p><a href="#">Upcoming events</a></p>
+            </div>
+            <div class="col-sm-3 offset-1" style="margin-top: 30px;">
+                <h3>Categories</h3>
+                <p><a href="#">Anxiety</a></p>
+                <p><a href="#">Lifestyle</a></p>
+                <p><a href="#">Cause and Symptoms</a></p>
+                <p><a href="#">Cure and Treatments</a></p>
+            </div>
+            <div class="col-sm-3 offset-1">
+                <div id="chat">
+                    Be a part of our family!!
+                    <form>
+                        <input type="text" name="name" placeholder="Enter your name"
+                            style="border: none; text-align: center;"><br>
+                        <button class="badge badge-pill badge-success">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr style="color: white;">
+        <div class="row">
+            <div class="col-sm-6 offset-1">
+                <a href="index.html">HOME</a>
+                <a href="#">PRIVACY</a>
+                <a href="#">SELF TESTS</a>
+                <a href="#">OUR TEAM</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">KNOW MORE</a>
+            </div>
+            <div class="col-sm-4 offset-1">
+                <p>MakeBetter|<span>&#169;</span>Copyright 2021</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function getValue2() {
+            var checks2 = document.getElementsByClassName('checks2');
+            var str2 = "";
+            for (i = 0; i < 4; i++) {
+                if (checks2[i].checked === true) {
+                    str2 += checks2[i].value + " ";
+                }
+            }
+            localStorage.setItem("2", str2);
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

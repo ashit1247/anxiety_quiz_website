@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Your status</title>
+    <style>
+        input[type=number],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=email],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #ccc {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        hr {
+            background-color: white;
+            width: 85%;
+        }
+
+        a {
+            color: white;
+            margin-right: 5px;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        #hh {
+            text-align: center;
+            padding-top: 100px;
+            color: white;
+        }
+
+        #bt {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #c11 {
+            position: relative;
+        }
+
+        #c22 {
+            position: relative;
+        }
+
+        .c1 {
+
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: grey;
+            font-size: 120%;
+        }
+
+
+        #chat {
+            height: 145px;
+            width: 75%;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            padding: 25px;
+        }
+
+
+        #bed {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="1.jpg" alt="Logo" style="width:60px;">
+        </a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Mental illness
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Anxiety</a>
+                        <a class="dropdown-item" href="#">Depression</a>
+                        <a class="dropdown-item" href="#">Eating disorder</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Self Assessment
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Quiz1</a>
+                        <a class="dropdown-item" href="startquiz.html">Anxiety Quiz</a>
+                        <a class="dropdown-item" href="#">Quiz2</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <div class="container" style="height:650px;padding: 60px;margin-left: auto;margin-right: auto;">
+        <h2>Congratulations! You have successfully completed your anxiety quiz</h2>
+
+        <div id="bed">
+            <form action="status.html">
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="Your email address" required>
+
+                <label for="num">Mobile number</label>
+                <input type="number" id="num" placeholder="Your mobile number">
+                <a href="status.html">
+                    <button class="btn btn-secondary btn-lg d-display"  type="submit" style="width: 100%;"
+                    onclick="window.location.href='status.html'">Show result</button>
+                </a>
+                
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color: rgb(32, 32, 32);color: white;">
+        <div class="row">
+            <div class="col-sm-3 offset-1" style="margin-top: 30px;">
+                <h3>Recent posts</h3>
+                <p><a href="#">Recent posts on survey</a></p>
+                <p><a href="#">Summer and winter campign</a></p>
+                <p><a href="#">Upcoming events</a></p>
+            </div>
+            <div class="col-sm-3 offset-1" style="margin-top: 30px;">
+                <h3>Categories</h3>
+                <p><a href="#">Anxiety</a></p>
+                <p><a href="#">Lifestyle</a></p>
+                <p><a href="#">Cause and Symptoms</a></p>
+                <p><a href="#">Cure and Treatments</a></p>
+            </div>
+            <div class="col-sm-3 offset-1">
+                <div id="chat">
+                    Be a part of our family!!
+                    <form>
+                        <input type="text" name="name" placeholder="Enter your name"
+                            style="border: none; text-align: center;"><br>
+                        <button class="badge badge-pill badge-success">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr style="color: white;">
+        <div class="row">
+            <div class="col-sm-6 offset-1">
+                <a href="index.html">HOME</a>
+                <a href="#">PRIVACY</a>
+                <a href="#">SELF TESTS</a>
+                <a href="#">OUR TEAM</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">KNOW MORE</a>
+            </div>
+            <div class="col-sm-4 offset-1">
+                <p>MakeBetter|<span>&#169;</span>Copyright 2021</p>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

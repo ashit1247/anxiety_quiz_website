@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Your status</title>
+    <style>
+        hr {
+            background-color: white;
+            width: 85%;
+        }
+
+        a {
+            color: white;
+            margin-right: 5px;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+
+        #chat {
+            height: 135px;
+            width: 75%;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            padding: 25px;
+        }
+
+
+
+        #bed {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="1.jpg" alt="Logo" style="width:60px;">
+        </a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Mental illness
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Anxiety</a>
+                        <a class="dropdown-item" href="#">Depression</a>
+                        <a class="dropdown-item" href="#">Eating disorder</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Self Assessment
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Quiz1</a>
+                        <a class="dropdown-item" href="startquiz.html">Anxiety Quiz</a>
+                        <a class="dropdown-item" href="#">Quiz2</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <div class="container" style="height:400px;padding: 60px;margin-left: auto;margin-right: auto;">
+        <span style="font-size: 150%;">Your score is </span><span style="font-size: 150%;" id="para1"></span><span
+            style="font-size: 150%;"> out of 50.</span><br>
+        <span style="font-size: 150%;">Your anxiety level is </span><span style="font-size: 150%;"
+            id="para2"></span><span style="font-size: 150%;">.</span>
+        <h4>Thank you for taking test. Pease give your feedback</h4>
+    </div>
+    <div class="container-fluid" style="background-color: rgb(32, 32, 32);color: white;">
+        <div class="row">
+            <div class="col-sm-3 offset-1" style="margin-top: 30px;">
+                <h3>Recent posts</h3>
+                <p><a href="#">Recent posts on survey</a></p>
+                <p><a href="#">Summer and winter campign</a></p>
+                <p><a href="#">Upcoming events</a></p>
+            </div>
+            <div class="col-sm-3 offset-1" style="margin-top: 30px;">
+                <h3>Categories</h3>
+                <p><a href="#">Anxiety</a></p>
+                <p><a href="#">Lifestyle</a></p>
+                <p><a href="#">Cause and Symptoms</a></p>
+                <p><a href="#">Cure and Treatments</a></p>
+            </div>
+            <div class="col-sm-3 offset-1">
+                <div id="chat">
+                    Be a part of our family!!
+                    <form>
+                        <input type="text" name="name" placeholder="Enter your name"
+                            style="border: none; text-align: center;"><br>
+                        <button class="badge badge-pill badge-success">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr style="color: white;">
+        <div class="row">
+            <div class="col-sm-6 offset-1">
+                <a href="index.html">HOME</a>
+                <a href="#">PRIVACY</a>
+                <a href="#">SELF TESTS</a>
+                <a href="#">OUR TEAM</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">KNOW MORE</a>
+            </div>
+            <div class="col-sm-4 offset-1">
+                <p>MakeBetter|<span>&#169;</span>Copyright 2021</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Corresponding score for each input label
+        // 1. Not at all - 0
+        // 2. Sometimes - 2
+        // 3. Most of the time - 3
+        // 4. All the time - 5
+
+        var text = "";
+        var arr = [];
+        var score = 0;
+        for (i = 1; i <= 10; i++) {
+            text = localStorage.getItem(i);
+            arr.push(text);
+        }
+
+        for (i = 0; i < 10; i++) {
+            if (arr[i] == 'Not at all ') {
+                score += 0;
+            }
+
+            else if (arr[i] == 'Sometimes ') {
+                score += 2;
+            }
+
+            else if (arr[i] == 'Most of the time ') {
+                score += 3;
+            }
+
+            else if (arr[i] == 'All the time ') {
+                score += 5;
+            }
+
+            else { }
+        }
+
+        document.getElementById("para1").innerHTML = score;
+
+        if (score >= 30) {
+            document.getElementById("para2").innerHTML = "High";
+            document.getElementById("para1").style.color="red";
+            document.getElementById("para2").style.color="red";
+        }
+
+        else if (score >= 20 && score < 30) {
+            document.getElementById("para2").innerHTML = " Quite high";
+            document.getElementById("para1").style.color="orange";
+            document.getElementById("para2").style.color="orange";
+        }
+
+        else if (score >= 10 && score < 20) {
+            document.getElementById("para2").innerHTML = " In control";
+            document.getElementById("para1").style.color="green";
+            document.getElementById("para2").style.color="green";
+        }
+
+        else if (score >= 0 && score < 10) {
+            document.getElementById("para2").innerHTML = " Normal";
+            document.getElementById("para1").style.color="blue";
+            document.getElementById("para2").style.color="blue";
+        }
+
+        localStorage.clear();
+    </script>
+</body>
+
+</html>
